@@ -1,0 +1,39 @@
+/* *****************************************
+ * Author: Duc Nguyen
+ * Email: yugidazai@gmail.com
+ * *****************************************/
+ ==============================================================================================
+
+***Assessment requirement
+- Display a ListView of items whose data can be retrieved from API
+  https://www.whatsbeef.net/wabz/guide.php?start=0 (offset = 0)
+- Each valid API (with any offset value) returns a JSON string with 10 items
+  and the count value for the number of total existing items.
+- When user scrolls down the ListView, more items should be loaded.
+
+***Implementation
+- Use a ListView with custom adapter to display list of ProgramEntry items.
+  Items' data is loaded by using an implementation of AsyncTask to download JSON string from URL (with offset)
+  then parse this JSON string to a list of a block of items.
+  At the beginning, first 20 items are loaded with a progress dialog shown.
+  When ListView is scrolled down to 2nd item of current block,
+  next block of items which are not downloaded will be loaded by using above AsyncTask.
+- JSONParserTest: JSONParser class's unit test.
+
+***Development Environment
+- IDE: Android Studio with JUnit4, Mockito and Hamcrest for UnitTest
+- JDK jdk1.8.0_31 (jdk1.7.xxx is still compatible)
+- SDK Tools: (recent previous version of these tools might still be compatible)
+  Android SDK Build Tools
+  Android SDK Tools 24.4.1
+  Android SDK Platform-Tools 23.0.1
+  Intel x86 Emulator Accelerator (HAXM installer), rev 5.5 (in case of running emulator)
+  
+***HOW TO RUN APP from Android Studio
+1. Load project into Android Studio
+2. Build project using menu "Build" in toolbar, then "Make project"
+3. menu "Run" > "Run 'app'"
+
+***How to run UnitTest with Android Studio
+1. Select tab "Build Variants" > change test artifact to "Unit Tests" 
+2. Right-click on unit test class/method > choose "Run ..."
