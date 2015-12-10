@@ -1,0 +1,18 @@
+<resources>
+    
+    <style name="TitleTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:gravity">center</item>
+        <item name="android:padding">@dimen/activity_title_padding</item>
+        <item name="android:textColor">@color/title_text_color</item>
+        <item name="android:textSize">@dimen/list_title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ListItemTextViewStyle" parent="TitleTextViewStyle">
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:padding">@dimen/list_item_padding</item>
+        <item name="android:textColor">@color/item_text_color</item>
+        <item name="android:textSize">@dimen/list_item_text_size</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+</resources>
