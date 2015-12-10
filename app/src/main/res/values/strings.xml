@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Channel Rating</string>
+    <string name="title_name">Program</string>
+    <string name="title_start_time">Start time</string>
+    <string name="title_end_time">End time</string>
+    <string name="title_channel">Channel</string>
+    <string name="title_rating">Rating</string>
+    <string name="progress_dialog_msg">Loading info...</string>
+</resources>
